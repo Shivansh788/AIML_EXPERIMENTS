@@ -13,7 +13,7 @@ df['A'].fillna(df['A'].mean(), inplace=True)
 df['B'].fillna(df['B'].median(), inplace=True)
 
 # Mode Imputation (for categorical data)
-# df['C'].fillna(df['C'].mode()[0], inplace=True)
+df['C'].fillna(df['C'].mode()[0], inplace=True)
 
 print(df)
 
@@ -50,7 +50,7 @@ print(data)
 #4. Multiple Imputation
 #Using fancyimpute library:
 
-# from fancyimpute import IterativeImputer
+from fancyimpute import IterativeImputer
 
 # Sample DataFrame
 data = pd.DataFrame([[1, 2], [np.nan, 3], [7, np.nan], [4, 5]])
